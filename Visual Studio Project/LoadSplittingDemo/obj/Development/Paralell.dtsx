@@ -1,0 +1,3261 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/1/2013 1:51:57 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="ANDREASYBNB001"
+  DTS:CreatorName="AndreasYBNB001\Andreasb"
+  DTS:DTSID="{5EEBED0E-20A0-40CF-9968-60D01C0C9CBD}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="15.0.1100.123"
+  DTS:LocaleID="7177"
+  DTS:ObjectName="Paralell"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{C19122EA-D914-4948-AC22-EE1E1E4C526D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{B5E1BE1F-A5E7-497A-809B-A313171E32BC}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::BasePath]+ @[User::Proc1FileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="7177"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ssis\pickup">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Value"
+              DTS:DTSID="{8D5377CA-E27B-4D91-B37D-9706204CB17E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{bcb58dc7-41aa-402a-8052-4ff3e3ab1974}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::BasePath]+ @[User::Proc2FileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="7177"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ssis\pickup">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Value"
+              DTS:DTSID="{D3A7949B-B5D1-4EAB-A862-D1F791665D81}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{79f0c342-4174-43eb-b9cc-be103fc7878c}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::BasePath]+ @[User::Proc3FileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="7177"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ssis\pickup">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Value"
+              DTS:DTSID="{8D5377CA-E27B-4D91-B37D-9706204CB17E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{be337c77-67a0-4bed-8d40-80015cc0d27c}"
+      DTS:ObjectName="Flat File Connection Manager 3">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::BasePath]+ @[User::Proc4FileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="7177"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ssis\pickup">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Value"
+              DTS:DTSID="{8D5377CA-E27B-4D91-B37D-9706204CB17E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ListFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{26E31907-0682-4F60-BD3E-786B308B56F5}"
+      DTS:ObjectName="ListFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="7177"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ssis\pickup\List.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FileName"
+              DTS:DTSID="{D45F09BD-A684-487C-A5F1-089EBE97165A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Index"
+              DTS:DTSID="{FE3F6635-CCF6-4DD3-8D8C-E12EA0733F3B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SSISLoadSplittingDemo]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0237E896-C7C8-43AE-87B4-AC09EF4032E6}"
+      DTS:ObjectName="LocalHost.SSISLoadSplittingDemo">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SSISLoadSplittingDemo;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C2254763-3763-48C4-8AE9-49D65B3CE608}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="BasseFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">File1.CSV</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C704EC9C-27EC-4CAB-B732-BD99FDF40F35}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4769F0B8-2BBF-46CC-BF53-BFB65856518D}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Project::BasePath] + @[User::BasseFileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FullFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\ssis\pickupFile1.CSV</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BDEB8A83-46D1-4863-B74B-EAAB5D551AD4}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Proc1FileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8B78B57D-7E8E-43D6-A39B-FE38F982F2A4}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Proc1List">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{976AB3D5-1189-4A60-87C6-C55FA3437B91}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Proc2FileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B35C4D2D-019D-42F0-A097-6E0466B84E86}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Proc2List">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FE5DB5A5-A8F4-47BF-8CC4-5AB7FD74DD1E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Proc3FileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{432E776E-6912-427D-BAAD-A258B684E94A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Proc3List">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1D21052F-BAEF-40CE-BD53-B0C8A2B5A7F9}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Proc4FileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FC7C58D6-1534-4601-B78F-0B540EDD8A68}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Proc4List">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_Build_A_List"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{486AA564-42B1-4E42-9B7B-D102BB805F5C}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_Build_A_List"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_Build_A_List\CS_SeparateProcesses"
+              componentClassID="DTSTransform.ConditionalSplit.3"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="CS_SeparateProcesses"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Build_A_List\CS_SeparateProcesses.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\CS_SeparateProcesses.Inputs[Conditional Split Input].Columns[ProcessID]"
+                      cachedDataType="i4"
+                      cachedName="ProcessID"
+                      lineageId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[ProcessID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[P1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="P1"
+                  synchronousInputId="Package\DFT_Build_A_List\CS_SeparateProcesses.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[ProcessID]} == 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ProcessID == 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[P2]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="P2"
+                  synchronousInputId="Package\DFT_Build_A_List\CS_SeparateProcesses.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[ProcessID]} == 1</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ProcessID == 1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[P3]"
+                  description="Output 3 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="P3"
+                  synchronousInputId="Package\DFT_Build_A_List\CS_SeparateProcesses.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[ProcessID]} == 2</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ProcessID == 2</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">2</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[P4]"
+                  description="Output 4 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="P4"
+                  synchronousInputId="Package\DFT_Build_A_List\CS_SeparateProcesses.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[ProcessID]} == 3</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ProcessID == 3</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">3</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\DFT_Build_A_List\CS_SeparateProcesses.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\DFT_Build_A_List\CS_SeparateProcesses.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Build_A_List\DC_BuildProcessID"
+              componentClassID="DTSTransform.DerivedColumn.3"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DC_BuildProcessID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Build_A_List\DC_BuildProcessID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\DC_BuildProcessID.Inputs[Derived Column Input].Columns[Index]"
+                      cachedDataType="i4"
+                      cachedName="Index"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[Index]" />
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\DC_BuildProcessID.Inputs[Derived Column Input].Columns[FileName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FileName"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[FileName]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_Build_A_List\DC_BuildProcessID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[ProcessID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[ProcessID]"
+                      name="ProcessID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[Index]} % 4</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Index % 4</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[FullFilename]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="82"
+                      lineageId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[FullFilename]"
+                      name="FullFilename"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">@[$Project::BasePath] + #{Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[FileName]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[$Project::BasePath] + FileName</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_Build_A_List\DC_BuildProcessID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Build_A_List\FFS_List"
+              componentClassID="DTSAdapter.FlatFileSource.3"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="7177"
+              name="FFS_List"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Build_A_List\FFS_List.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ListFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[ListFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[FileName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].ExternalColumns[FileName]"
+                      length="50"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[FileName]"
+                      name="FileName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[Index]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].ExternalColumns[Index]"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[Index]"
+                      name="Index"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].ExternalColumns[FileName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FileName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].ExternalColumns[Index]"
+                      dataType="i4"
+                      name="Index" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Build_A_List\RSD_Proc1"
+              componentClassID="DTSAdapter.RecordsetDestination.3"
+              contactInfo="Recordset Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates and populates an in-memory ADO recordset that is available outside of the data flow. Scripts and other package elements can use the recordset. For example, use a recordset to store the names of files that will be loaded into the data warehouse."
+              name="RSD_Proc1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the recordset."
+                  name="VariableName">User::Proc1List</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_Build_A_List\RSD_Proc1.Inputs[Recordset Destination Input]"
+                  hasSideEffects="true"
+                  name="Recordset Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\RSD_Proc1.Inputs[Recordset Destination Input].Columns[FileName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FileName"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[FileName]" />
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\RSD_Proc1.Inputs[Recordset Destination Input].Columns[Index]"
+                      cachedDataType="i4"
+                      cachedName="Index"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[Index]" />
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\RSD_Proc1.Inputs[Recordset Destination Input].Columns[FullFilename]"
+                      cachedDataType="wstr"
+                      cachedLength="82"
+                      cachedName="FullFilename"
+                      lineageId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[FullFilename]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\DFT_Build_A_List\RSD_Proc2"
+              componentClassID="DTSAdapter.RecordsetDestination.3"
+              contactInfo="Recordset Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates and populates an in-memory ADO recordset that is available outside of the data flow. Scripts and other package elements can use the recordset. For example, use a recordset to store the names of files that will be loaded into the data warehouse."
+              name="RSD_Proc2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the recordset."
+                  name="VariableName">User::Proc2List</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_Build_A_List\RSD_Proc2.Inputs[Recordset Destination Input]"
+                  hasSideEffects="true"
+                  name="Recordset Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\RSD_Proc2.Inputs[Recordset Destination Input].Columns[FileName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FileName"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[FileName]" />
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\RSD_Proc2.Inputs[Recordset Destination Input].Columns[Index]"
+                      cachedDataType="i4"
+                      cachedName="Index"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[Index]" />
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\RSD_Proc2.Inputs[Recordset Destination Input].Columns[FullFilename]"
+                      cachedDataType="wstr"
+                      cachedLength="82"
+                      cachedName="FullFilename"
+                      lineageId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[FullFilename]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\DFT_Build_A_List\RSD_Proc3"
+              componentClassID="DTSAdapter.RecordsetDestination.3"
+              contactInfo="Recordset Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates and populates an in-memory ADO recordset that is available outside of the data flow. Scripts and other package elements can use the recordset. For example, use a recordset to store the names of files that will be loaded into the data warehouse."
+              name="RSD_Proc3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the recordset."
+                  name="VariableName">User::Proc3List</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_Build_A_List\RSD_Proc3.Inputs[Recordset Destination Input]"
+                  hasSideEffects="true"
+                  name="Recordset Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\RSD_Proc3.Inputs[Recordset Destination Input].Columns[FileName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FileName"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[FileName]" />
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\RSD_Proc3.Inputs[Recordset Destination Input].Columns[Index]"
+                      cachedDataType="i4"
+                      cachedName="Index"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[Index]" />
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\RSD_Proc3.Inputs[Recordset Destination Input].Columns[FullFilename]"
+                      cachedDataType="wstr"
+                      cachedLength="82"
+                      cachedName="FullFilename"
+                      lineageId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[FullFilename]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\DFT_Build_A_List\RSD_Proc4"
+              componentClassID="DTSAdapter.RecordsetDestination.3"
+              contactInfo="Recordset Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates and populates an in-memory ADO recordset that is available outside of the data flow. Scripts and other package elements can use the recordset. For example, use a recordset to store the names of files that will be loaded into the data warehouse."
+              name="RSD_Proc4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the recordset."
+                  name="VariableName">User::Proc4List</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_Build_A_List\RSD_Proc4.Inputs[Recordset Destination Input]"
+                  hasSideEffects="true"
+                  name="Recordset Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\RSD_Proc4.Inputs[Recordset Destination Input].Columns[FileName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FileName"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[FileName]" />
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\RSD_Proc4.Inputs[Recordset Destination Input].Columns[Index]"
+                      cachedDataType="i4"
+                      cachedName="Index"
+                      lineageId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output].Columns[Index]" />
+                    <inputColumn
+                      refId="Package\DFT_Build_A_List\RSD_Proc4.Inputs[Recordset Destination Input].Columns[FullFilename]"
+                      cachedDataType="wstr"
+                      cachedLength="82"
+                      cachedName="FullFilename"
+                      lineageId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output].Columns[FullFilename]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_Build_A_List.Paths[Derived Column Output]"
+              endId="Package\DFT_Build_A_List\CS_SeparateProcesses.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DFT_Build_A_List\DC_BuildProcessID.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_Build_A_List.Paths[Flat File Source Output]"
+              endId="Package\DFT_Build_A_List\DC_BuildProcessID.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\DFT_Build_A_List\FFS_List.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\DFT_Build_A_List.Paths[P1]"
+              endId="Package\DFT_Build_A_List\RSD_Proc1.Inputs[Recordset Destination Input]"
+              name="P1"
+              startId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[P1]" />
+            <path
+              refId="Package\DFT_Build_A_List.Paths[P2]"
+              endId="Package\DFT_Build_A_List\RSD_Proc2.Inputs[Recordset Destination Input]"
+              name="P2"
+              startId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[P2]" />
+            <path
+              refId="Package\DFT_Build_A_List.Paths[P3]"
+              endId="Package\DFT_Build_A_List\RSD_Proc3.Inputs[Recordset Destination Input]"
+              name="P3"
+              startId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[P3]" />
+            <path
+              refId="Package\DFT_Build_A_List.Paths[P4]"
+              endId="Package\DFT_Build_A_List\RSD_Proc4.Inputs[Recordset Destination Input]"
+              name="P4"
+              startId="Package\DFT_Build_A_List\CS_SeparateProcesses.Outputs[P4]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FLC_Proc1"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{ED8052F6-15F7-4527-95B3-B1AA66F9613D}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FLC_Proc1">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+        DTS:DTSID="{3B6D9BAB-864E-4989-878A-B1B084A5EEAF}"
+        DTS:ObjectName="{3B6D9BAB-864E-4989-878A-B1B084A5EEAF}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::Proc1List" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\FLC_Proc1\LoadSequencial"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{E46C6EC8-992E-4749-ABF2-EDD3A436CC09}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="LoadSequencial"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\FLC_Proc1\LoadSequencial\DC_FileName"
+                  componentClassID="DTSTransform.DerivedColumn.3"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="DC_FileName"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[SourceFile]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="9"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[SourceFile]"
+                          name="SourceFile"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::BasseFileName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::BasseFileName]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[ProcessDateTime]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[ProcessDateTime]"
+                          name="ProcessDateTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[GETDATE]()</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">GETDATE()</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad"
+                  componentClassID="DTSAdapter.OLEDBDestination.3"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="DST_SecuentialLoad"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[SequentialLoad]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.SSISLoadSplittingDemo]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.SSISLoadSplittingDemo]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].Columns[Value]"
+                          cachedDataType="i4"
+                          cachedName="Value"
+                          externalMetadataColumnId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].Columns[Value]" />
+                        <inputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].Columns[SourceFile]"
+                          cachedDataType="wstr"
+                          cachedLength="9"
+                          cachedName="SourceFile"
+                          externalMetadataColumnId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[SourceFile]" />
+                        <inputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].Columns[ProcessDateTime]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="ProcessDateTime"
+                          externalMetadataColumnId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDateTime]"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[ProcessDateTime]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                          dataType="i4"
+                          name="Value" />
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                          dataType="wstr"
+                          length="9"
+                          name="SourceFile" />
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDateTime]"
+                          dataType="dbTimeStamp"
+                          name="ProcessDateTime" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FLC_Proc1\LoadSequencial\Flat File Source"
+                  componentClassID="DTSAdapter.FlatFileSource.3"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="7177"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].Columns[Value]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Value]"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].Columns[Value]"
+                          name="Value"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Value]"
+                          dataType="i4"
+                          name="Value" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\FLC_Proc1\LoadSequencial.Paths[Derived Column Output]"
+                  endId="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\FLC_Proc1\LoadSequencial.Paths[Flat File Source Output]"
+                  endId="Package\FLC_Proc1\LoadSequencial\DC_FileName.Inputs[Derived Column Input]"
+                  name="Flat File Source Output"
+                  startId="Package\FLC_Proc1\LoadSequencial\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{65DFF498-5EB2-4DA3-883F-650D6E3BA1E9}"
+          DTS:ObjectName="{65DFF498-5EB2-4DA3-883F-650D6E3BA1E9}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::Proc1FileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FLC_Proc2"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{1d8be291-ef88-447c-a792-77ff43a5cc33}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FLC_Proc2">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+        DTS:DTSID="{5168cfac-ecf0-4791-91fa-609952456f2f}"
+        DTS:ObjectName="{3B6D9BAB-864E-4989-878A-B1B084A5EEAF}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::Proc2List" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\FLC_Proc2\LoadSequencial"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{4ffcf14e-762a-4437-a3db-9801efcaf271}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="LoadSequencial"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\FLC_Proc2\LoadSequencial\DC_FileName"
+                  componentClassID="DTSTransform.DerivedColumn.3"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="DC_FileName"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[SourceFile]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="9"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[SourceFile]"
+                          name="SourceFile"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::BasseFileName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::BasseFileName]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[ProcessDateTime]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[ProcessDateTime]"
+                          name="ProcessDateTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[GETDATE]()</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">GETDATE()</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad"
+                  componentClassID="DTSAdapter.OLEDBDestination.3"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="DST_SecuentialLoad"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[SequentialLoad]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.SSISLoadSplittingDemo]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.SSISLoadSplittingDemo]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].Columns[Value]"
+                          cachedDataType="i4"
+                          cachedName="Value"
+                          externalMetadataColumnId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].Columns[Value]" />
+                        <inputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].Columns[SourceFile]"
+                          cachedDataType="wstr"
+                          cachedLength="9"
+                          cachedName="SourceFile"
+                          externalMetadataColumnId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[SourceFile]" />
+                        <inputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].Columns[ProcessDateTime]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="ProcessDateTime"
+                          externalMetadataColumnId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDateTime]"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[ProcessDateTime]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                          dataType="i4"
+                          name="Value" />
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                          dataType="wstr"
+                          length="9"
+                          name="SourceFile" />
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDateTime]"
+                          dataType="dbTimeStamp"
+                          name="ProcessDateTime" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FLC_Proc2\LoadSequencial\Flat File Source"
+                  componentClassID="DTSAdapter.FlatFileSource.3"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="7177"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].Columns[Value]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Value]"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].Columns[Value]"
+                          name="Value"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Value]"
+                          dataType="i4"
+                          name="Value" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\FLC_Proc2\LoadSequencial.Paths[Derived Column Output]"
+                  endId="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\FLC_Proc2\LoadSequencial.Paths[Flat File Source Output]"
+                  endId="Package\FLC_Proc2\LoadSequencial\DC_FileName.Inputs[Derived Column Input]"
+                  name="Flat File Source Output"
+                  startId="Package\FLC_Proc2\LoadSequencial\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{DA8FE983-4B92-4E44-9709-BF451B0F544C}"
+          DTS:ObjectName="{DA8FE983-4B92-4E44-9709-BF451B0F544C}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::Proc2FileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FLC_Proc3"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{af70cf3f-badf-450e-87fb-1cf140e0faef}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FLC_Proc3">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+        DTS:DTSID="{11354725-566d-48c5-a843-12e2947aa6a6}"
+        DTS:ObjectName="{3B6D9BAB-864E-4989-878A-B1B084A5EEAF}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::Proc3List" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\FLC_Proc3\LoadSequencial"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{cf7ac289-4aad-445f-a036-b6b713e83a35}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="LoadSequencial"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\FLC_Proc3\LoadSequencial\DC_FileName"
+                  componentClassID="DTSTransform.DerivedColumn.3"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="DC_FileName"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[SourceFile]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="9"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[SourceFile]"
+                          name="SourceFile"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::BasseFileName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::BasseFileName]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[ProcessDateTime]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[ProcessDateTime]"
+                          name="ProcessDateTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[GETDATE]()</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">GETDATE()</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad"
+                  componentClassID="DTSAdapter.OLEDBDestination.3"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="DST_SecuentialLoad"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[SequentialLoad]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.SSISLoadSplittingDemo]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.SSISLoadSplittingDemo]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].Columns[Value]"
+                          cachedDataType="i4"
+                          cachedName="Value"
+                          externalMetadataColumnId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].Columns[Value]" />
+                        <inputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].Columns[SourceFile]"
+                          cachedDataType="wstr"
+                          cachedLength="9"
+                          cachedName="SourceFile"
+                          externalMetadataColumnId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[SourceFile]" />
+                        <inputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].Columns[ProcessDateTime]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="ProcessDateTime"
+                          externalMetadataColumnId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDateTime]"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[ProcessDateTime]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                          dataType="i4"
+                          name="Value" />
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                          dataType="wstr"
+                          length="9"
+                          name="SourceFile" />
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDateTime]"
+                          dataType="dbTimeStamp"
+                          name="ProcessDateTime" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FLC_Proc3\LoadSequencial\Flat File Source"
+                  componentClassID="DTSAdapter.FlatFileSource.3"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="7177"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].Columns[Value]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Value]"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].Columns[Value]"
+                          name="Value"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Value]"
+                          dataType="i4"
+                          name="Value" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\FLC_Proc3\LoadSequencial.Paths[Derived Column Output]"
+                  endId="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\FLC_Proc3\LoadSequencial.Paths[Flat File Source Output]"
+                  endId="Package\FLC_Proc3\LoadSequencial\DC_FileName.Inputs[Derived Column Input]"
+                  name="Flat File Source Output"
+                  startId="Package\FLC_Proc3\LoadSequencial\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{C7B63251-EAD6-4458-A791-02717020E2F2}"
+          DTS:ObjectName="{C7B63251-EAD6-4458-A791-02717020E2F2}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::Proc3FileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FLC_Proc4"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{4bb152f0-2443-464e-aaac-8d6ac063f9e7}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FLC_Proc4">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+        DTS:DTSID="{0113f63c-f7ed-4755-8b73-f9ad1c917b57}"
+        DTS:ObjectName="{3B6D9BAB-864E-4989-878A-B1B084A5EEAF}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::Proc4List" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\FLC_Proc4\LoadSequencial"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{0bbf7d10-28fe-496d-a8df-1a8d9eec33a8}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="LoadSequencial"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\FLC_Proc4\LoadSequencial\DC_FileName"
+                  componentClassID="DTSTransform.DerivedColumn.3"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="DC_FileName"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[SourceFile]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="9"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[SourceFile]"
+                          name="SourceFile"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::BasseFileName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::BasseFileName]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[ProcessDateTime]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[ProcessDateTime]"
+                          name="ProcessDateTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[GETDATE]()</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">GETDATE()</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad"
+                  componentClassID="DTSAdapter.OLEDBDestination.3"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="DST_SecuentialLoad"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[SequentialLoad]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.SSISLoadSplittingDemo]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.SSISLoadSplittingDemo]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].Columns[Value]"
+                          cachedDataType="i4"
+                          cachedName="Value"
+                          externalMetadataColumnId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].Columns[Value]" />
+                        <inputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].Columns[SourceFile]"
+                          cachedDataType="wstr"
+                          cachedLength="9"
+                          cachedName="SourceFile"
+                          externalMetadataColumnId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[SourceFile]" />
+                        <inputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].Columns[ProcessDateTime]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="ProcessDateTime"
+                          externalMetadataColumnId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDateTime]"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Output].Columns[ProcessDateTime]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[Value]"
+                          dataType="i4"
+                          name="Value" />
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                          dataType="wstr"
+                          length="9"
+                          name="SourceFile" />
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input].ExternalColumns[ProcessDateTime]"
+                          dataType="dbTimeStamp"
+                          name="ProcessDateTime" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FLC_Proc4\LoadSequencial\Flat File Source"
+                  componentClassID="DTSAdapter.FlatFileSource.3"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="7177"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].Columns[Value]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Value]"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].Columns[Value]"
+                          name="Value"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Value]"
+                          dataType="i4"
+                          name="Value" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\FLC_Proc4\LoadSequencial.Paths[Derived Column Output]"
+                  endId="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\FLC_Proc4\LoadSequencial.Paths[Flat File Source Output]"
+                  endId="Package\FLC_Proc4\LoadSequencial\DC_FileName.Inputs[Derived Column Input]"
+                  name="Flat File Source Output"
+                  startId="Package\FLC_Proc4\LoadSequencial\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{574071C3-1283-4DA0-8FA2-7B2E7E5482B3}"
+          DTS:ObjectName="{574071C3-1283-4DA0-8FA2-7B2E7E5482B3}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::Proc4FileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{90BBAB27-4BA0-4AD6-9B87-4FB6BC081F9D}"
+      DTS:From="Package\DFT_Build_A_List"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\FLC_Proc1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{CF6EE152-405A-42CD-8E86-70B6E5BD6621}"
+      DTS:From="Package\DFT_Build_A_List"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\FLC_Proc2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{90B75909-5936-45D8-9EEC-FF55110EBCCE}"
+      DTS:From="Package\DFT_Build_A_List"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\FLC_Proc3" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{DA5EC3F5-FDEA-45D3-8136-A875BDE0BEAC}"
+      DTS:From="Package\DFT_Build_A_List"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\FLC_Proc4" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="161,42"
+          Id="Package\DFT_Build_A_List"
+          TopLeft="454.5,5.49999999999989" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\FLC_Proc1\LoadSequencial"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="163,103"
+          Size="163,146"
+          Id="Package\FLC_Proc1"
+          TopLeft="5.5,107.5" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\FLC_Proc2\LoadSequencial"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="163,103"
+          Size="163,146"
+          Id="Package\FLC_Proc2"
+          TopLeft="229.5,107.5" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\FLC_Proc3\LoadSequencial"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="163,103"
+          Size="163,146"
+          Id="Package\FLC_Proc3"
+          TopLeft="453.5,107.5" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\FLC_Proc4\LoadSequencial"
+          TopLeft="5.5,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="163,103"
+          Size="163,146"
+          Id="Package\FLC_Proc4"
+          TopLeft="677.5,107.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="489.1,47.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-402.1,60.0000000000001"
+              Start="0,0"
+              End="-402.1,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.0364900086881" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.0364900086881"
+                    Point2="0,18.0364900086881"
+                    Point3="-4,18.0364900086881" />
+                  <mssgle:LineSegment
+                    End="-398.1,18.0364900086881" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-398.1,18.0364900086881"
+                    Point2="-402.1,18.0364900086881"
+                    Point3="-402.1,22.0364900086881" />
+                  <mssgle:LineSegment
+                    End="-402.1,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="519.7,47.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-208.7,60"
+              Start="0,0"
+              End="-208.7,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8496911461908" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.8496911461908"
+                    Point2="0,26.8496911461908"
+                    Point3="-4,26.8496911461908" />
+                  <mssgle:LineSegment
+                    End="-204.7,26.8496911461908" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-204.7,26.8496911461908"
+                    Point2="-208.7,26.8496911461908"
+                    Point3="-208.7,30.8496911461908" />
+                  <mssgle:LineSegment
+                    End="-208.7,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="550.3,47.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15.3,60"
+              Start="0,0"
+              End="-15.3,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8496911461908" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.8496911461908"
+                    Point2="0,26.8496911461908"
+                    Point3="-4,26.8496911461908" />
+                  <mssgle:LineSegment
+                    End="-11.3,26.8496911461908" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11.3,26.8496911461908"
+                    Point2="-15.3,26.8496911461908"
+                    Point3="-15.3,30.8496911461908" />
+                  <mssgle:LineSegment
+                    End="-15.3,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="580.9,47.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="178.1,60"
+              Start="0,0"
+              End="178.1,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.0364900086881" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.0364900086881"
+                    Point2="0,18.0364900086881"
+                    Point3="4,18.0364900086881" />
+                  <mssgle:LineSegment
+                    End="174.1,18.0364900086881" />
+                  <mssgle:CubicBezierSegment
+                    Point1="174.1,18.0364900086881"
+                    Point2="178.1,18.0364900086881"
+                    Point3="178.1,22.0364900086881" />
+                  <mssgle:LineSegment
+                    End="178.1,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT_Build_A_List">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="118,42"
+          Id="Package\DFT_Build_A_List\FFS_List"
+          TopLeft="396,5.49999999999989" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\DFT_Build_A_List\DC_BuildProcessID"
+          TopLeft="371,107.5" />
+        <EdgeLayout
+          Id="Package\DFT_Build_A_List.Paths[Flat File Source Output]"
+          TopLeft="455,47.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="185,42"
+          Id="Package\DFT_Build_A_List\CS_SeparateProcesses"
+          TopLeft="362.5,209.5" />
+        <EdgeLayout
+          Id="Package\DFT_Build_A_List.Paths[Derived Column Output]"
+          TopLeft="455,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="131,42"
+          Id="Package\DFT_Build_A_List\RSD_Proc1"
+          TopLeft="5.5,311.5" />
+        <EdgeLayout
+          Id="Package\DFT_Build_A_List.Paths[P1]"
+          TopLeft="401.9,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-330.9,60.0000000000001"
+              Start="0,0"
+              End="-330.9,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.9226686884003" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.9226686884003"
+                    Point2="0,17.9226686884003"
+                    Point3="-4,17.9226686884003" />
+                  <mssgle:LineSegment
+                    End="-326.9,17.9226686884003" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-326.9,17.9226686884003"
+                    Point2="-330.9,17.9226686884003"
+                    Point3="-330.9,21.9226686884003" />
+                  <mssgle:LineSegment
+                    End="-330.9,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-171.16056640625,22.9226686884003,11.4211328125,9.294921875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="131,42"
+          Id="Package\DFT_Build_A_List\RSD_Proc2"
+          TopLeft="197.5,311.5" />
+        <EdgeLayout
+          Id="Package\DFT_Build_A_List.Paths[P2]"
+          TopLeft="437.3,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-174.3,60"
+              Start="0,0"
+              End="-174.3,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8260609683204" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.8260609683204"
+                    Point2="0,26.8260609683204"
+                    Point3="-4,26.8260609683204" />
+                  <mssgle:LineSegment
+                    End="-170.3,26.8260609683204" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-170.3,26.8260609683204"
+                    Point2="-174.3,26.8260609683204"
+                    Point3="-174.3,30.8260609683204" />
+                  <mssgle:LineSegment
+                    End="-174.3,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-93.04611328125,31.8260609683204,11.7922265625,9.421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="131,42"
+          Id="Package\DFT_Build_A_List\RSD_Proc3"
+          TopLeft="389.5,311.5" />
+        <EdgeLayout
+          Id="Package\DFT_Build_A_List.Paths[P3]"
+          TopLeft="472.7,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.6999999999999,60"
+              Start="0,0"
+              End="-17.6999999999999,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8260609683204" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.8260609683204"
+                    Point2="0,26.8260609683204"
+                    Point3="-4,26.8260609683204" />
+                  <mssgle:LineSegment
+                    End="-13.6999999999999,26.8260609683204" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.6999999999999,26.8260609683204"
+                    Point2="-17.6999999999999,26.8260609683204"
+                    Point3="-17.6999999999999,30.8260609683204" />
+                  <mssgle:LineSegment
+                    End="-17.6999999999999,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-14.68263671875,31.8260609683204,11.6652734375,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="131,42"
+          Id="Package\DFT_Build_A_List\RSD_Proc4"
+          TopLeft="581.5,311.5" />
+        <EdgeLayout
+          Id="Package\DFT_Build_A_List.Paths[P4]"
+          TopLeft="508.1,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="138.9,60"
+              Start="0,0"
+              End="138.9,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.9226686884003" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.9226686884003"
+                    Point2="0,17.9226686884003"
+                    Point3="4,17.9226686884003" />
+                  <mssgle:LineSegment
+                    End="134.9,17.9226686884003" />
+                  <mssgle:CubicBezierSegment
+                    Point1="134.9,17.9226686884003"
+                    Point2="138.9,17.9226686884003"
+                    Point3="138.9,21.9226686884003" />
+                  <mssgle:LineSegment
+                    End="138.9,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="63.458671875,22.9226686884003,11.98265625,9.2705078125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\FLC_Proc1\LoadSequencial">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\FLC_Proc1\LoadSequencial\DC_FileName"
+          TopLeft="169,139" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\FLC_Proc1\LoadSequencial\Flat File Source"
+          TopLeft="95,23" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad"
+          TopLeft="431,141" />
+        <EdgeLayout
+          Id="Package\FLC_Proc1\LoadSequencial.Paths[Flat File Source Output]"
+          TopLeft="170.5,65">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.5,74"
+              Start="0,0"
+              End="69.5,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33"
+                    Point2="0,37"
+                    Point3="4,37" />
+                  <mssgle:LineSegment
+                    End="65.5,37" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.5,37"
+                    Point2="69.5,37"
+                    Point3="69.5,41" />
+                  <mssgle:LineSegment
+                    End="69.5,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FLC_Proc1\LoadSequencial.Paths[Derived Column Output]"
+          TopLeft="311,161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120,0"
+              Start="0,0"
+              End="112.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="112.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FLC_Proc1\LoadSequencial\DST_SecuentialLoad">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\FLC_Proc2\LoadSequencial">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\FLC_Proc2\LoadSequencial\DC_FileName"
+          TopLeft="169,139" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\FLC_Proc2\LoadSequencial\Flat File Source"
+          TopLeft="95,23" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\FLC_Proc2\LoadSequencial\DST_SecuentialLoad"
+          TopLeft="431,141" />
+        <EdgeLayout
+          Id="Package\FLC_Proc2\LoadSequencial.Paths[Derived Column Output]"
+          TopLeft="311,161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120,0"
+              Start="0,0"
+              End="112.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="112.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FLC_Proc2\LoadSequencial.Paths[Flat File Source Output]"
+          TopLeft="170.5,65">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.5,74"
+              Start="0,0"
+              End="69.5,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33"
+                    Point2="0,37"
+                    Point3="4,37" />
+                  <mssgle:LineSegment
+                    End="65.5,37" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.5,37"
+                    Point2="69.5,37"
+                    Point3="69.5,41" />
+                  <mssgle:LineSegment
+                    End="69.5,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\FLC_Proc3\LoadSequencial">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\FLC_Proc3\LoadSequencial\DC_FileName"
+          TopLeft="169,139" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\FLC_Proc3\LoadSequencial\Flat File Source"
+          TopLeft="95,23" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\FLC_Proc3\LoadSequencial\DST_SecuentialLoad"
+          TopLeft="431,141" />
+        <EdgeLayout
+          Id="Package\FLC_Proc3\LoadSequencial.Paths[Derived Column Output]"
+          TopLeft="311,161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120,0"
+              Start="0,0"
+              End="112.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="112.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FLC_Proc3\LoadSequencial.Paths[Flat File Source Output]"
+          TopLeft="170.5,65">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.5,74"
+              Start="0,0"
+              End="69.5,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33"
+                    Point2="0,37"
+                    Point3="4,37" />
+                  <mssgle:LineSegment
+                    End="65.5,37" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.5,37"
+                    Point2="69.5,37"
+                    Point3="69.5,41" />
+                  <mssgle:LineSegment
+                    End="69.5,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\FLC_Proc4\LoadSequencial">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\FLC_Proc4\LoadSequencial\DC_FileName"
+          TopLeft="169,139" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\FLC_Proc4\LoadSequencial\Flat File Source"
+          TopLeft="95,23" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\FLC_Proc4\LoadSequencial\DST_SecuentialLoad"
+          TopLeft="431,141" />
+        <EdgeLayout
+          Id="Package\FLC_Proc4\LoadSequencial.Paths[Derived Column Output]"
+          TopLeft="311,161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120,0"
+              Start="0,0"
+              End="112.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="112.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FLC_Proc4\LoadSequencial.Paths[Flat File Source Output]"
+          TopLeft="170.5,65">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.5,74"
+              Start="0,0"
+              End="69.5,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33"
+                    Point2="0,37"
+                    Point3="4,37" />
+                  <mssgle:LineSegment
+                    End="65.5,37" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.5,37"
+                    Point2="69.5,37"
+                    Point3="69.5,41" />
+                  <mssgle:LineSegment
+                    End="69.5,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
